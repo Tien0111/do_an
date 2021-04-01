@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RequestLogin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class LoginController extends Controller
 {
@@ -13,6 +14,7 @@ class LoginController extends Controller
         if($request->ajax())
         {
             $credentials = $request->only('email', 'password');
+            Log::info($credentials);
             if (\Auth::guard('users')->attempt($credentials)) {
                 return response()->json([
                     'status' => 200

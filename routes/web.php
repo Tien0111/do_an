@@ -18,4 +18,8 @@ Route::group(['namespace' => 'Auth','prefix' => 'account'], function (){
     Route::post('register','RegisterController@postRegister')->name('post.register');
 });
 Route::get('','HomeController@index')->name('get.home');
-Route::get('job/{slug}.html','JobController@index')->name('get.job');
+Route::get('job/nganh-nghe-{slug}.html','CareerController@index')->name('get.career.index');
+Route::get('job/{slug}-{hashID}.html','JobController@index')->name('get.job')
+    ->where(['slug' => '[a-z-]+','hashID' => '[a-z0-9A-Z]+']);
+
+

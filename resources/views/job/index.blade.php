@@ -104,44 +104,22 @@
                             <a href="employer_list2.html#" title="" class="active">ALL</a><a href="employer_list2.html#" title="">A</a><a href="employer_list2.html#" title="">B</a><a href="employer_list2.html#" title="">C</a><a href="employer_list2.html#" title="">D</a><a href="employer_list2.html#" title="">E</a><a href="employer_list2.html#" title="">F</a><a href="employer_list2.html#" title="">G</a><a href="employer_list2.html#" title="">H</a><a href="employer_list2.html#" title="">I</a><a href="employer_list2.html#" title="">J</a><a href="employer_list2.html#" title="">K</a><a href="employer_list2.html#" title="">L</a><a href="employer_list2.html#" title="">M</a><a href="employer_list2.html#" title="">N</a><a href="employer_list2.html#" title="">O</a><a href="employer_list2.html#" title="">P</a><a href="employer_list2.html#" title="">Q</a><a href="employer_list2.html#" title="">R</a><a href="employer_list2.html#" title="">S</a><a href="employer_list2.html#" title="">T</a><a href="employer_list2.html#" title="">U</a><a href="employer_list2.html#" title="">V</a><a href="employer_list2.html#" title="">W</a><a href="employer_list2.html#" title="">X</a><a href="employer_list2.html#" title="">Y</a><a href="employer_list2.html#" title="">Z</a>
                         </div>
                         <div class="emply-list-sec style2">
-                            <div class="emply-list">
+                            @foreach($jobs as $item)
+                                <div class="emply-list">
                                 <div class="emply-list-thumb">
-                                    <a href="employer_list2.html#" title=""><img src="https://grandetest.com/theme/jobhunt-html/images/resource/em1.jpg" alt=""></a>
+                                    <a href="employer_list2.html#" title="">
+                                        <img src="https://grandetest.com/theme/jobhunt-html/images/resource/em1.jpg" alt="">
+                                    </a>
                                 </div>
                                 <div class="emply-list-info">
                                     <div class="emply-pstn">4 Open Position</div>
-                                    <h3><a href="employer_list2.html#" title="">King LLC</a></h3>
-                                    <span>Accountancy, Human Resources</span>
-                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                    <p>The Heavy Equipment / Grader Operator  is responsible for operating one or several types construction equipment, such as front end loader, roller, bulldozer, or excavator to move,…</p>
+                                    <h3><a href="employer_list2.html#" title="">{{ $item->j_name }}</a></h3>
+                                    <span>{{ $item->company->c_name ?? "[N\A]" }}</span>
+                                    <h6><i class="la la-map-marker"></i> {{ $item->j_address }}</h6>
+{{--                                    <p>Mô tả</p>--}}
                                 </div>
                             </div>
-                            <!-- Employe List -->
-                            <div class="emply-list">
-                                <div class="emply-list-thumb">
-                                    <a href="employer_list2.html#" title=""><img src="https://grandetest.com/theme/jobhunt-html/images/resource/em2.jpg" alt=""></a>
-                                </div>
-                                <div class="emply-list-info">
-                                    <div class="emply-pstn">4 Open Position</div>
-                                    <h3><a href="employer_list2.html#" title="">Telimed</a></h3>
-                                    <span>Accounting Assistant, Arts, Design, and Media</span>
-                                    <h6><i class="la la-map-marker"></i> Toronto, Ontario</h6>
-                                    <p>The Heavy Equipment / Grader Operator  is responsible for operating one or several types construction equipment, such as front end loader, roller, bulldozer, or excavator to move,…</p>
-                                </div>
-                            </div>
-                            <!-- Employe List -->
-                            <div class="pagination">
-                                <ul>
-                                    <li class="prev"><a href="employer_list2.html"><i class="la la-long-arrow-left"></i> Prev</a></li>
-                                    <li><a href="employer_list2.html">1</a></li>
-                                    <li class="active"><a href="employer_list2.html">2</a></li>
-                                    <li><a href="employer_list2.html">3</a></li>
-                                    <li><span class="delimeter">...</span></li>
-                                    <li><a href="employer_list2.html">14</a></li>
-                                    <li class="next"><a href="employer_list2.html">Next <i class="la la-long-arrow-right"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Pagination -->
+                            @endforeach
                         </div>
                     </div>
                 </div>

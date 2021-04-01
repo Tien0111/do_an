@@ -29,7 +29,7 @@
 <div class="theme-layout" id="scrollup">
     <div class="responsive-header">
         <div class="responsive-menubar">
-            <div class="res-logo"><a href="https://grandetest.com/theme/jobhunt-html/index.html" title=""><img src="https://grandetest.com/theme/jobhunt-html/images/resource/logo.png" alt=""></a></div>
+            <div class="res-logo"><a href="{{ route('get.home') }}" title=""><img src="https://grandetest.com/theme/jobhunt-html/images/resource/logo.png" alt=""></a></div>
             <div class="menu-resaction">
                 <div class="res-openmenu">
                     <img src="https://grandetest.com/theme/jobhunt-html/images/icon.png" alt=""> Menu
@@ -158,20 +158,16 @@
         <div class="menu-sec">
             <div class="container">
                 <div class="logo">
-                    <a href="https://grandetest.com/theme/jobhunt-html/index.html" title=""><img src="https://grandetest.com/theme/jobhunt-html/images/resource/logo.png" alt=""></a>
+                    <a href="{{ route('get.home') }}" title=""><img src="https://grandetest.com/theme/jobhunt-html/images/resource/logo.png" alt=""></a>
                 </div><!-- Logo -->
                 <div class="btns-profiles-sec">
                     <span><img src="https://grandetest.com/theme/jobhunt-html/images/resource/profile.jpg" alt=""> {{ Auth::guard('users')->user()->name }} <i class="la la-angle-down"></i></span>
                     <ul>
-                        <li><a href="https://grandetest.com/theme/jobhunt-html/employer_profile.html" title=""><i class="la la-file-text"></i>Company Profile</a></li>
-                        <li><a href="employer_manage_jobs.html" title=""><i class="la la-briefcase"></i>Manage Jobs</a></li>
-                        <li><a href="https://grandetest.com/theme/jobhunt-html/employer_transactions.html" title=""><i class="la la-money"></i>Transactions</a></li>
-                        <li><a href="https://grandetest.com/theme/jobhunt-html/employer_resume.html" title=""><i class="la la-paper-plane"></i>Resumes</a></li>
-                        <li><a href="https://grandetest.com/theme/jobhunt-html/employer_packages.html" title=""><i class="la la-user"></i>Packages</a></li>
-                        <li><a href="https://grandetest.com/theme/jobhunt-html/employer_post_new.html" title=""><i class="la la-file-text"></i>Post a New Job</a></li>
-                        <li><a href="https://grandetest.com/theme/jobhunt-html/employer_job_alert.html" title=""><i class="la la-flash"></i>Job Alerts</a></li>
-                        <li><a href="https://grandetest.com/theme/jobhunt-html/employer_change_password.html" title=""><i class="la la-lock"></i>Change Password</a></li>
-                        <li><a href="employer_manage_jobs.html#" title=""><i class="la la-unlink"></i>Logout</a></li>
+                        @foreach(config('user.drop_menu') as $item)
+                            <li><a href="{{ route($item['route']) }}" title="{{ $item['name'] }}"><i class="la la-file-text"></i>{{ $item['name'] }}</a></li>
+                        @endforeach
+
+                        <li><a href="" title=""><i class="la la-unlink"></i>Đăng xuất</a></li>
                     </ul>
                 </div>
                 <nav>

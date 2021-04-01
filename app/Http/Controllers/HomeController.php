@@ -11,9 +11,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $jobsNew = Job::orderByDesc('id')
+        $jobsNew = Job::with('company:id,c_name,c_logo')->orderByDesc('id')
             ->limit(10)
-            ->get(['id', 'j_name', 'j_address']);
+            ->get(['id', 'j_name', 'j_address','j_slug','j_hash_slug','j_company_id']);
 
         $careersHot = Career::where('c_hot', Career::HOT)
             ->limit(8)

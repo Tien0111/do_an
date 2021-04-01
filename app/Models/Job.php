@@ -9,34 +9,49 @@ use Illuminate\Support\Arr;
 class Job extends Model
 {
     use HasFactory;
+
     protected $guarded = [''];
 
     const STATUS_PROCESS = 1;
     const STATUS_SUCCESS = 2;
-    const STATUS_CANCEL = -2;
+    const STATUS_CANCEL  = -2;
     const STATUS_REQUEST = -1;
 
     public $status = [
         self::STATUS_PROCESS => [
-            'class' => 'btn-warning',
-            'name' => 'Chờ duyệt'
+            'class'      => 'btn-warning',
+            'class-text' => 'text-warning',
+            'name'       => 'Chờ duyệt'
         ],
         self::STATUS_SUCCESS => [
-            'class' => 'btn-success',
-            'name' => 'Đã duyệt'
+            'class'      => 'btn-success',
+            'class-text' => 'text-success',
+            'name'       => 'Đã duyệt'
         ],
-        self::STATUS_CANCEL => [
-            'class' => 'btn-danger',
-            'name' => 'Đã huỷ'
+        self::STATUS_CANCEL  => [
+            'class'      => 'btn-danger',
+            'class-text' => 'text-danger',
+            'name'       => 'Đã huỷ'
         ],
         self::STATUS_REQUEST => [
-            'class' => 'btn-primary',
-            'name' => 'Yêu cầu duyệt lại'
+            'class'      => 'btn-primary',
+            'class-text' => 'text-primary',
+            'name'       => 'Yêu cầu duyệt lại'
         ],
     ];
 
     public function getStatus()
     {
-        return Arr::get($this->status, $this->j_status,[]);
+        return Arr::get($this->status, $this->j_status, []);
+    }
+
+    public function career()
+    {
+        return $this->belongsTo(Career::class, 'j_career_id');
+    }
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class,'j_company_id');
     }
 }

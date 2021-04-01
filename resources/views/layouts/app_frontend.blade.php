@@ -161,20 +161,33 @@
                 <div class="logo">
                     <a href="" title=""><img class="hidesticky" src="https://grandetest.com/theme/jobhunt-html/images/resource/logo.png" alt="" /><img class="showsticky" src="https://grandetest.com/theme/jobhunt-html/images/resource/logo10.png" alt="" /></a>
                 </div><!-- Logo -->
-                <div class="btn-extars">
-                    <a href="" title="" class="post-job-btn"><i class="la la-plus"></i>Đăng tin</a>
-                    <ul class="account-btns">
-                        <li class="signup-popup"><a title=""><i class="la la-key"></i> Đăng ký</a></li>
-                        <li class="signin-popup"><a title=""><i class="la la-external-link-square"></i> Đăng nhập</a></li>
+
+                @if(get_data_user('users'))
+                <div class="btns-profiles-sec">
+                    <span><img src="https://grandetest.com/theme/jobhunt-html/images/resource/profile.jpg" alt=""> TrungPhuNA <i class="la la-angle-down"></i></span>
+                    <ul>
+                        @foreach(config('user.drop_menu') as $item)
+                        <li><a href="{{ route($item['route']) }}" title="{{ $item['name'] }}"><i class="la la-file-text"></i>{{ $item['name'] }}</a></li>
+                        @endforeach
+                        <li><a href="" title=""><i class="la la-unlink"></i>Đăng xuất</a></li>
                     </ul>
-                </div><!-- Btn Extras -->
+                </div>
+                @else
+                    <div class="btn-extars">
+                        <a href="" title="" class="post-job-btn"><i class="la la-plus"></i>Đăng tin</a>
+                        <ul class="account-btns">
+                            <li class="signup-popup"><a title=""><i class="la la-key"></i> Đăng ký</a></li>
+                            <li class="signin-popup"><a title=""><i class="la la-external-link-square"></i> Đăng nhập</a></li>
+                        </ul>
+                    </div><!-- Btn Extras -->
+                @endif
                 <nav>
                     <ul>
                         <li class="">
                             <a href="{{ route('get.home') }}" title="">Trang chủ</a>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="{{ route('get.job',['slug' => 'danh-sach-viec-lam']) }}" title="Việc làm">Tìm việc</a>
+                            <a href="" title="Việc làm">Tìm việc</a>
                             <ul>
                                 <li><a href="" title="">Việc làm theo địa điểm</a></li>
                                 <li><a href="" title="">Việc làm nổi bật</a></li>

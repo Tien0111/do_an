@@ -28,10 +28,7 @@ var Auth = {
                     console.log(data);
                 },
                 error: function (response) {
-
                     if( response.status === 422 ) {
-                        var errors = $.parseJSON(response.responseText);
-                        console.log(errors)
                         $.each(response.responseJSON.errors,function(field_name,error){
                             $(document).find('[name='+field_name+']').parent().after('<span class="text-error">' +error+ '</span>')
                         })
@@ -50,11 +47,18 @@ var Auth = {
                 url: $formLogin.attr('action'),
                 type:'POST',
                 data:formData,
-                success:function(data){
-                    console.log(data);
+                success:function(response){
+                    if(response.status === 200)
+                    {
+                        location.reload();
+                    }
                 },
                 error: function (data) {
-                    console.log(data);
+                    if( response.status === 422 ) {
+                        $.each(response.responseJSON.errors,function(field_name,error){
+                            $(document).find('[name='+field_name+']').parent().after('<span class="text-error">' +error+ '</span>')
+                        })
+                    }
                 }
             });
 

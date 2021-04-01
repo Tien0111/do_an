@@ -70,7 +70,7 @@
                                     @foreach($careers as $item)
                                         <div class="col-lg-3 col-md-3 col-sm-6">
                                             <div class="p-category">
-                                                <a href="" title="">
+                                                <a href="{{ route('get.career.index',['slug' => $item->c_slug]) }}" title="{{ $item->c_name }}">
                                                     <i class="la la-bullhorn"></i>
                                                     <span>{{ $item->c_name }}</span>
                                                     <p>(22 open positions)</p>
@@ -125,10 +125,10 @@
                                 <div class="job-listing">
                                     <div class="job-title-sec">
                                         <div class="c-logo"><img
-                                                src="https://grandetest.com/theme/jobhunt-html/images/resource/l1.png"
+                                                src="{{ pare_url_file($item->company->c_logo ?? '') }}"
                                                 alt=""/></div>
-                                        <h3><a href="index.html#" title="">{{ $item->j_name }}</a></h3>
-                                        <span>Massimo Artemisis</span>
+                                        <h3><a href="{{ route('get.job',['slug' => $item->j_slug,'hashID' => $item->j_hash_slug]) }}" title="">{{ $item->j_name }}</a></h3>
+                                        <span>{{ $item->company->c_name ?? "[N\A]" }}</span>
                                     </div>
                                     <span class="job-lctn"><i class="la la-map-marker"></i>{{ $item->j_address }}</span>
                                     <span class="fav-job"><i class="la la-heart-o"></i></span>
