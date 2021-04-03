@@ -28,4 +28,10 @@ class Company extends Model
         5 => 'Tự do',
         6 => 'Khác',
     ];
+
+    public function careers()
+    {
+        return $this->belongsToMany(Career::class,'company_careers','cc_company_id','cc_careers_id');
+    }
+
 }

@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/jobhunt/css/colors.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/jobhunt/css/bootstrap.css') }}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-
+    @yield('css')
 </head>
 <body>
 
@@ -30,7 +30,7 @@
 
     <div class="responsive-header">
         <div class="responsive-menubar">
-            <div class="res-logo"><a href="index.html" title=""><img src="https://grandetest.com/theme/jobhunt-html/images/resource/logo.png" alt="" /></a></div>
+            <div class="res-logo"><a href="{{ route('get.home') }}" title=""><img src="https://grandetest.com/theme/jobhunt-html/images/resource/logo.png" alt="" /></a></div>
             <div class="menu-resaction">
                 <div class="res-openmenu">
                     <img src="https://grandetest.com/theme/jobhunt-html/images/icon.png" alt="" /> Menu
@@ -159,7 +159,7 @@
         <div class="menu-sec">
             <div class="container">
                 <div class="logo">
-                    <a href="" title=""><img class="hidesticky" src="https://grandetest.com/theme/jobhunt-html/images/resource/logo.png" alt="" /><img class="showsticky" src="https://grandetest.com/theme/jobhunt-html/images/resource/logo10.png" alt="" /></a>
+                    <a href="{{ route('get.home') }}" title=""><img class="hidesticky" src="https://grandetest.com/theme/jobhunt-html/images/resource/logo.png" alt="" /><img class="showsticky" src="https://grandetest.com/theme/jobhunt-html/images/resource/logo10.png" alt="" /></a>
                 </div><!-- Logo -->
 
                 @if(get_data_user('users'))
@@ -169,7 +169,7 @@
                         @foreach(config('user.drop_menu') as $item)
                         <li><a href="{{ route($item['route']) }}" title="{{ $item['name'] }}"><i class="la la-file-text"></i>{{ $item['name'] }}</a></li>
                         @endforeach
-                        <li><a href="" title=""><i class="la la-unlink"></i>Đăng xuất</a></li>
+                        <li><a href="{{ route('get.logout') }}" title=""><i class="la la-unlink"></i>Đăng xuất</a></li>
                     </ul>
                 </div>
                 @else

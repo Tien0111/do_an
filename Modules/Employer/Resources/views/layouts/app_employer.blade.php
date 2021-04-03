@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/jobhunt/css/colors.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/jobhunt/css/bootstrap.css') }}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-
+    @yield('css')
 </head>
 <body>
 
@@ -291,7 +291,7 @@
 <script src="{{ asset('assets/jobhunt/js/slick.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/jobhunt/js/parallax.js') }}" type="text/javascript"></script>
 {{--<script src="{{ asset('assets/jobhunt/js/select-chosen.js') }}" type="text/javascript"></script>--}}
-
+@yield('script')
 </body>
 </html>
 

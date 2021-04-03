@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="inner-header">
-                            <h3>Employer</h3>
+{{--                            <h3>Employer</h3>--}}
                         </div>
                     </div>
                 </div>
@@ -104,16 +104,16 @@
                             <a href="employer_list2.html#" title="" class="active">ALL</a><a href="employer_list2.html#" title="">A</a><a href="employer_list2.html#" title="">B</a><a href="employer_list2.html#" title="">C</a><a href="employer_list2.html#" title="">D</a><a href="employer_list2.html#" title="">E</a><a href="employer_list2.html#" title="">F</a><a href="employer_list2.html#" title="">G</a><a href="employer_list2.html#" title="">H</a><a href="employer_list2.html#" title="">I</a><a href="employer_list2.html#" title="">J</a><a href="employer_list2.html#" title="">K</a><a href="employer_list2.html#" title="">L</a><a href="employer_list2.html#" title="">M</a><a href="employer_list2.html#" title="">N</a><a href="employer_list2.html#" title="">O</a><a href="employer_list2.html#" title="">P</a><a href="employer_list2.html#" title="">Q</a><a href="employer_list2.html#" title="">R</a><a href="employer_list2.html#" title="">S</a><a href="employer_list2.html#" title="">T</a><a href="employer_list2.html#" title="">U</a><a href="employer_list2.html#" title="">V</a><a href="employer_list2.html#" title="">W</a><a href="employer_list2.html#" title="">X</a><a href="employer_list2.html#" title="">Y</a><a href="employer_list2.html#" title="">Z</a>
                         </div>
                         <div class="emply-list-sec style2">
-                            @foreach($jobs as $item)
+                            @foreach($jobs ?? [] as $item)
                                 <div class="emply-list">
                                 <div class="emply-list-thumb">
-                                    <a href="employer_list2.html#" title="">
-                                        <img src="https://grandetest.com/theme/jobhunt-html/images/resource/em1.jpg" alt="">
+                                    <a href="{{ route('get.job',['slug' => $item->j_slug,'hashID' => $item->j_hash_slug]) }}" title="{{ $item->j_name }}">
+                                        <img src="{{ pare_url_file($item->company->c_logo ?? '') }}" alt="{{ $item->j_name }}">
                                     </a>
                                 </div>
                                 <div class="emply-list-info">
-                                    <div class="emply-pstn">4 Open Position</div>
-                                    <h3><a href="employer_list2.html#" title="">{{ $item->j_name }}</a></h3>
+                                    <div class="emply-pstn">{{ $item->getAttributeJob->a_name ?? "[N\A]" }}</div>
+                                    <h3><a href="{{ route('get.job',['slug' => $item->j_slug,'hashID' => $item->j_hash_slug]) }}" title="{{ $item->j_name }}">{{ $item->j_name }}</a></h3>
                                     <span>{{ $item->company->c_name ?? "[N\A]" }}</span>
                                     <h6><i class="la la-map-marker"></i> {{ $item->j_address }}</h6>
 {{--                                    <p>Mô tả</p>--}}

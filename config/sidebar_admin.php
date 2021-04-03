@@ -27,4 +27,9 @@ return [
         'icon' => 'turned_in_not',
         'route' => 'get_admin.job.index'
     ],
+    [
+        'name' => 'Ứng viên',
+        'icon' => 'supervisor_account',
+        'route' => 'get_admin.user.index'
+    ],
 ];

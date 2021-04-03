@@ -4,6 +4,7 @@ namespace Modules\Employer\Http\Controllers;
 
 use App\Models\Career;
 use App\Models\Company;
+use App\Models\CompanyCareer;
 use Carbon\Carbon;
 use Hashids\Hashids;
 use Illuminate\Contracts\Support\Renderable;
@@ -18,11 +19,15 @@ class EmployerCompanyController extends Controller
     {
         $scale        = (new Company())->scale;
         $working_time = (new Company())->working_time;
+        $careers      = Career::all();
+        $company      = Company::where('c_employer_id', get_data_user('users'))->first();
+        $careersCompany = CompanyCareer::where('cc_company_id', $company->id ?? 0)->pluck('cc_careers_id')->toArray();
 
-        $company  = Company::where('c_employer_id', get_data_user('users'))->first();
-        $viewData = [
+        $viewData     = [
             'scale'        => $scale,
+            'careers'      => $careers,
             'company'      => $company,
+            'careersCompany' => $careersCompany,
             'working_time' => $working_time,
         ];
         return view('employer::company.index', $viewData);
@@ -30,7 +35,7 @@ class EmployerCompanyController extends Controller
 
     public function store(CompanyRequest $request)
     {
-        $data               = $request->except('_token','logo');
+        $data               = $request->except('_token', 'logo','careers');
         $data['c_slug']     = Str::slug($request->c_name);
         $data['created_at'] = Carbon::now();
         if ($request->logo) {
@@ -38,9 +43,10 @@ class EmployerCompanyController extends Controller
             if ($image['code'] == 1)
                 $data['c_logo'] = $image['name'];
         }
-        $company  = Company::where('c_employer_id', get_data_user('users'))->first();
-        if($company){
+        $company = Company::where('c_employer_id', get_data_user('users'))->first();
+        if ($company) {
             $company->fill($data)->save();
+            $this->syncCareers($request->careers, $company->id);
             return redirect()->back();
         }
         $company = Company::create($data);
@@ -52,6 +58,27 @@ class EmployerCompanyController extends Controller
             $company->c_hash_slug = $hashID;
             $company->save();
         }
+        $this->syncCareers($request->careers, $company->id);
         return redirect()->back();
+    }
+
+    public function syncCareers($careers, $companyID)
+    {
+        if(!empty($careers))
+        {
+            try{
+                CompanyCareer::where('cc_company_id', $companyID)->delete();
+                foreach ($careers as $item)
+                {
+                    CompanyCareer::create([
+                        'cc_company_id' => $companyID,
+                        'cc_careers_id' => $item
+                    ]);
+                }
+            }catch (\Exception $exception)
+            {
+
+            }
+        }
     }
 }

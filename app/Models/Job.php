@@ -44,6 +44,10 @@ class Job extends Model
     {
         return Arr::get($this->status, $this->j_status, []);
     }
+    public function getAttributeJob()
+    {
+        return $this->belongsTo(Attribute::class,'j_form_of_work_id');
+    }
 
     public function career()
     {
