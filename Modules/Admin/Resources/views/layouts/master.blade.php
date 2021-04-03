@@ -12,6 +12,7 @@
     <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="{{ asset('template_admin/styles/shards-dashboards.1.1.0.min.css') }}">
     <link rel="stylesheet" href="{{ asset('template_admin/styles/extras.1.1.0.min.css') }}">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <meta name="robots" content="NOINDEX, NOFOLLOW">
 </head>
 <body class="h-100">
 <div class="color-switcher animated">

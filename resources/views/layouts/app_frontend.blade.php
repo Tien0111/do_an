@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/jobhunt/css/colors.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/jobhunt/css/bootstrap.css') }}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <meta name="robots" content="NOINDEX, NOFOLLOW">
     @yield('css')
 </head>
 <body>
