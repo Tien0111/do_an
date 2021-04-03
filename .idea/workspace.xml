@@ -22,9 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72a8987a-9472-40db-bc7a-00289d418664" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="72a8987a-9472-40db-bc7a-00289d418664" name="Default Changelist" comment="add noindex no follow">
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/career/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/career/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,8 +205,16 @@
       <workItem from="1615985069116" duration="99000" />
       <workItem from="1616088957958" duration="4321000" />
       <workItem from="1616123448470" duration="57000" />
-      <workItem from="1617468457397" duration="8080000" />
+      <workItem from="1617468457397" duration="8400000" />
     </task>
+    <task id="LOCAL-00001" summary="add noindex no follow">
+      <created>1617479635630</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617479635630</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,5 +231,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add noindex no follow" />
+    <option name="LAST_COMMIT_MESSAGE" value="add noindex no follow" />
   </component>
 </project>
