@@ -1,5 +1,8 @@
 <?php
 
 return [
-    'name' => 'User'
+    'name' => 'User',
+    'sidebar' => [
+
+    ]
 ];
