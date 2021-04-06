@@ -37,7 +37,6 @@ var Auth = {
                 type:'POST',
                 data:formData,
                 success:function(data){
-                    console.log(data)
                     if(typeof data.email !== "undefined") {
                         location.reload();
                     }

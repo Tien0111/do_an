@@ -1,4 +1,7 @@
 @extends('layouts.app_frontend')
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/job_detail.css') }}" />
+@stop
 @section('content')
     <section class="overlape">
         <div class="block no-padding">
@@ -8,7 +11,6 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="inner-header">
-                            <h3>Employer</h3>
                         </div>
                     </div>
                 </div>
@@ -40,11 +42,12 @@
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="share-bar">
-                                            <a href="employer_single1.html#" title="" class="share-google"><i class="la la-google"></i></a><a href="employer_single1.html#" title="" class="share-fb"><i class="fa fa-facebook"></i></a><a href="employer_single1.html#" title="" class="share-twitter"><i class="fa fa-twitter"></i></a>
+                                            <a href="" title="" class="share-google"><i class="la la-google"></i></a><a href="employer_single1.html#" title="" class="share-fb"><i class="fa fa-facebook"></i></a><a href="employer_single1.html#" title="" class="share-twitter"><i class="fa fa-twitter"></i></a>
                                         </div>
                                         <div class="emply-btns">
-                                            <a class="seemap" href="employer_single1.html#" title=""><i class="la la-map-marker"></i> See On Map</a>
-                                            <a class="followus" href="employer_single1.html#" title=""><i class="la la-paper-plane"></i> Follow us</a>
+                                            <a class="seemap js-apply-job" data-hash-slug="{{ $job->j_hash_slug }}"
+                                               href="" title="">Ứng tuyển</a>
+                                            <a class="followus" href="" title=""><i class="la la-paper-plane"></i> Theo dõi </a>
                                         </div>
                                     </div>
                                 </div>
@@ -146,4 +149,9 @@
             </div>
         </div>
     </section>
+    @include('components.popup._inc_popup_apply_job')
+@stop
+
+@section('script')
+    <script src="{{ asset('js/home.js') }}"></script>
 @stop

@@ -24,20 +24,22 @@
 <body>
 
 <div class="page-loading">
-    <img src="https://grandetest.com/theme/jobhunt-html/images/loader.gif" alt="" />
+    <img src="{{ asset('images/loader.gif') }}" alt="" />
 </div>
 
 <div class="theme-layout" id="scrollup">
 
     <div class="responsive-header">
         <div class="responsive-menubar">
-            <div class="res-logo"><a href="{{ route('get.home') }}" title=""><img src="https://grandetest.com/theme/jobhunt-html/images/resource/logo.png" alt="" /></a></div>
+            <div class="res-logo"><a href="{{ route('get.home') }}" title="">
+                    <img src="{{ asset('images/logo.png') }}" alt="" /></a>
+            </div>
             <div class="menu-resaction">
                 <div class="res-openmenu">
-                    <img src="https://grandetest.com/theme/jobhunt-html/images/icon.png" alt="" /> Menu
+                    <img src="{{ asset('images/icon.png') }}" alt="" /> Menu
                 </div>
                 <div class="res-closemenu">
-                    <img src="https://grandetest.com/theme/jobhunt-html/images/icon2.png" alt="" /> Close
+                    <img src="{{ asset('images/icon2.png') }}" alt="" /> Close
                 </div>
             </div>
         </div>
@@ -165,7 +167,7 @@
 
                 @if(get_data_user('users'))
                 <div class="btns-profiles-sec">
-                    <span><img src="https://grandetest.com/theme/jobhunt-html/images/resource/profile.jpg" alt=""> TrungPhuNA <i class="la la-angle-down"></i></span>
+                    <span><img src="{{ asset('images/profile.jpg') }}" alt="">{{ get_data_user('users','name') }}<i class="la la-angle-down"></i></span>
                     <ul>
                         @foreach(config('user.drop_menu') as $item)
                         <li><a href="{{ route($item['route']) }}" title="{{ $item['name'] }}"><i class="la la-file-text"></i>{{ $item['name'] }}</a></li>
@@ -215,8 +217,6 @@
 
 @include('components.auth._inc_auth')
 
-{{--<script data-cfasync="false" src="https://grandetest.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">--}}
-{{--</script>--}}
 <script src="{{ asset('assets/jobhunt/js/jquery.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/jobhunt/js/modernizr.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/jobhunt/js/script.js') }}" type="text/javascript"></script>

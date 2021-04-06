@@ -10,7 +10,7 @@
                     <div class="col-lg-12">
                         <div class="main-featured-sec">
                             <div class="new-slide">
-                                <img src="https://grandetest.com/theme/jobhunt-html/images/resource/vector-1.png">
+                                <img src="{{ asset('images/vector-1.png') }}">
                             </div>
                             <div class="job-search-sec">
                                 <div class="job-search">

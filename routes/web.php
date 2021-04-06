@@ -26,6 +26,8 @@ Route::get('job/{slug}-{hashID}.html','JobController@index')->name('get.job')
 
 Route::group(['namespace' => 'Ajax','prefix' => 'ajax'], function (){
     Route::get('job/{hashID}','AjaxFavouriteJobController@addFavourite')->name('ajax_get.add.favourite');
+    Route::post('job-ally','AjaxApplyJobController@applyJob')
+        ->name('ajax_post.add.apply_job');
 });
 
 
