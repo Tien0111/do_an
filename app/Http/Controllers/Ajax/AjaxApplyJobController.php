@@ -37,6 +37,7 @@ class AjaxApplyJobController extends Controller
             Log::info($request->file);
             $userID = get_data_user('users') ? get_data_user('users') : 0;
 
+
             if ($userID) {
                 $jobApply = ApplyJob::where([
                     'aj_user_id' => $userID,
