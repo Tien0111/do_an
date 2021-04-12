@@ -45,7 +45,7 @@
                                             <a href="" title="" class="share-google"><i class="la la-google"></i></a><a href="employer_single1.html#" title="" class="share-fb"><i class="fa fa-facebook"></i></a><a href="employer_single1.html#" title="" class="share-twitter"><i class="fa fa-twitter"></i></a>
                                         </div>
                                         <div class="emply-btns">
-                                            <a class="seemap js-apply-job" data-hash-slug="{{ $job->j_hash_slug }}"
+                                            <a class="seemap js-apply-job" data-hash-slug="{{ $job->j_hash_slug }}" data-title="{{ $job->j_name }}"
                                                href="" title="">Ứng tuyển</a>
                                             <a class="followus" href="" title=""><i class="la la-paper-plane"></i> Theo dõi </a>
                                         </div>

@@ -23,30 +23,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72a8987a-9472-40db-bc7a-00289d418664" name="Default Changelist" comment="create nganh nghe">
-      <change afterPath="$PROJECT_DIR$/Modules/Employer/Resources/views/apply_job/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/_inc_apply_job.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/scss/components/_inc_popup_apply_job.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/scss/custome/_inc_autoload.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/scss/custome/_inc_button.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/scss/custome/_inc_form.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/scss/custome/_inc_modal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/scss/pages/job_detail.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/popup/_inc_popup_apply_job.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckLoginAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckLoginUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Employer/Resources/views/layouts/app_employer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Employer/Resources/views/layouts/app_employer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Employer/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Employer/Routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/employer.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/employer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/jobhunt/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/jobhunt/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/User/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/User/Routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Ajax/AjaxApplyJobController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Ajax/AjaxApplyJobController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/_inc_auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/_inc_auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/_inc_apply_job.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/_inc_apply_job.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/popup/_inc_popup_apply_job.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/popup/_inc_popup_apply_job.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/job_detail/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/job_detail/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app_frontend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app_frontend.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,12 +187,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/User/Resources/views/pages/job_apply" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Middleware" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Middleware" />
       <recent name="$PROJECT_DIR$/Modules/User/Resources/views/pages/job_apply" />
       <recent name="$PROJECT_DIR$/Modules/Admin/Resources/views/job" />
       <recent name="$PROJECT_DIR$/Modules/Admin/Resources/views/attribute" />
@@ -231,7 +227,8 @@
       <workItem from="1616123448470" duration="57000" />
       <workItem from="1617468457397" duration="9083000" />
       <workItem from="1617628067058" duration="1382000" />
-      <workItem from="1617713316938" duration="5255000" />
+      <workItem from="1617713316938" duration="5698000" />
+      <workItem from="1618251152662" duration="2056000" />
     </task>
     <task id="LOCAL-00001" summary="add noindex no follow">
       <created>1617479635630</created>

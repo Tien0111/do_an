@@ -167,7 +167,8 @@
 
                 @if(get_data_user('users'))
                 <div class="btns-profiles-sec">
-                    <span><img src="{{ asset('images/profile.jpg') }}" alt="">{{ get_data_user('users','name') }}<i class="la la-angle-down"></i></span>
+                    <a href="{{ route('get_employer.job.index') }}" style="float: right;padding-left: 10px;padding-right: 10px" title="" class="post-job-btn"><i class="la la-plus"></i>Nhà tuyển dụng</a>
+                    <span><img src="{{ asset('images/profile.jpg') }}" alt="">{{ get_data_user('users','name') }}<i style="margin-right: 10px;margin-left: 5px" class="la la-angle-down"></i></span>
                     <ul>
                         @foreach(config('user.drop_menu') as $item)
                         <li><a href="{{ route($item['route']) }}" title="{{ $item['name'] }}"><i class="la la-file-text"></i>{{ $item['name'] }}</a></li>

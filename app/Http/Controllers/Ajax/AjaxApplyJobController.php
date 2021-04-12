@@ -33,6 +33,8 @@ class AjaxApplyJobController extends Controller
                     'messages' => 'Dữ liệu không tồn tại'
                 ]);
             }
+
+            Log::info($request->file);
             $userID = get_data_user('users') ? get_data_user('users') : 0;
 
             if ($userID) {

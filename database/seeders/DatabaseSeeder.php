@@ -17,6 +17,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        try{
+            \DB::table('admins')->insert([
+                'name' => 'TrungPhuNA',
+                'email' => 'codethue94@gmail.com',
+                'phone' => '0986420994',
+                'password' => \Hash::make('123456789')
+            ]);
+        }catch (\Exception $exception){
+            Log::error("[Seed Admin] ". $exception->getMessage());
+        }
+
         $attributes = [
             Attribute::TYPE_EXPERIENCE   => [
                 'Chưa có kinh nghiệm',

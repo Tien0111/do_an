@@ -17,6 +17,11 @@ Route::group(['namespace' => 'Auth','prefix' => 'account'], function (){
     Route::post('login','LoginController@postLogin')->name('post.login');
     Route::post('register','RegisterController@postRegister')->name('post.register');
     Route::get('logout','LoginController@getLogout')->name('get.logout');
+
+    Route::get('admin-login','AdminLoginController@getAdminLogin')->name('get.admin_login');
+    Route::post('admin-login','AdminLoginController@postAdminLogin');
+    Route::get('admin-logout','AdminLoginController@logoutAdmin')->name('get.admin_logout');
+
 });
 Route::get('','HomeController@index')->name('get.home');
 Route::get('tim-kiem.html','SearchJobController@index')->name('get.search.job');

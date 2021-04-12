@@ -1,8 +1,8 @@
 <div class="modal modal-md modal-apply" id="apply-form">
-    <form id="form-apply" action="{{ route('ajax_post.add.apply_job') }}" method="POST" novalidate="novalidate">
+    <form id="form-apply" action="{{ route('ajax_post.add.apply_job') }}" method="POST" novalidate="novalidate" enctype="multipart/form-data">
         @csrf
         <div class="modal-header">
-            <h2 class="title">Ứng tuyển: <span>Công ty TNHH MTV tư vấn thiết kế xây dựng SALA architecture</span></h2>
+            <h2 class="title">Ứng tuyển: <span id="title-apply">Công ty TNHH MTV tư vấn thiết kế xây dựng SALA architecture</span></h2>
         </div>
         <div class="modal-body">
             <div class="new showb">
@@ -14,6 +14,11 @@
                     <div class="form-group">
                         <label>Họ và tên<span class="text-danger">*</span> :</label>
                         <input type="text" value="Phan Trung Phú" placeholder="Họ tên" name="name" class="form-control">
+                        <p class="error-form"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload CV<span class="text-danger">*</span> :</label>
+                        <input type="file"  placeholder="Họ tên" name="file" class="form-control">
                         <p class="error-form"></p>
                     </div>
                     <div class="form-row">
