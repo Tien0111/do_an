@@ -34,7 +34,6 @@ class AjaxApplyJobController extends Controller
                 ]);
             }
 
-            Log::info($request->file);
             $userID = get_data_user('users') ? get_data_user('users') : 0;
 
 
@@ -50,6 +49,7 @@ class AjaxApplyJobController extends Controller
                     ]);
                 }
             }
+
             $applyJob = $this->createApplyJob($request, $job);
             if ($applyJob) {
                 return response([
@@ -67,6 +67,13 @@ class AjaxApplyJobController extends Controller
     protected function createApplyJob($request, $job)
     {
         try {
+            $file = null;
+            if($request->hasFile('file')) {
+                $image = upload_image('file','',['doc','docx','pdf']);
+                if ($image['code'] == 1)
+                    $file = $image['name'];
+            }
+
             return ApplyJob::create([
                 'aj_name'        => $request->name,
                 'aj_phone'       => $request->phone,
@@ -77,7 +84,7 @@ class AjaxApplyJobController extends Controller
                 'aj_company_id'  => $job->j_company_id,
                 'aj_employer_id' => $job->j_employer_id,
                 'aj_about'       => $job->about,
-                'aj_file_cv'     => null,
+                'aj_file_cv'     => $file,
                 'created_at'     => Carbon::now()
             ]);
         } catch (\Exception $exception) {

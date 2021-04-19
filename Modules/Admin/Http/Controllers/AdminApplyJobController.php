@@ -1,24 +1,24 @@
 <?php
 
-namespace Modules\Employer\Http\Controllers;
+namespace Modules\Admin\Http\Controllers;
 
 use App\Models\ApplyJob;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class EmployerApplyJobController extends Controller
+class AdminApplyJobController extends Controller
 {
     public function index()
     {
-        $applyJobs = ApplyJob::with('job:id,j_name,j_hash_slug,j_address,j_slug')->where('aj_employer_id', get_data_user('users'))
+        $applyJobs = ApplyJob::with('job:id,j_name,j_hash_slug,j_address,j_slug')
             ->orderByDesc('id')
             ->paginate(10);
 
         $viewData = [
             'applyJobs' => $applyJobs
         ];
-        return view('employer::apply_job.index', $viewData);
+        return view('admin::apply_job.index', $viewData);
     }
 
     public function delete($id)

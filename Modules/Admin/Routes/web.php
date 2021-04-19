@@ -34,4 +34,9 @@ Route::prefix('admin')->middleware('checkLoginAdmin')->group(function() {
     Route::prefix('employer')->group(function() {
         Route::get('', 'AdminEmployerController@index')->name('get_admin.employer.index');
     });
+
+    Route::prefix('apply-job')->group(function() {
+        Route::get('', 'AdminApplyJobController@index')->name('get_admin.apply_job.index');
+        Route::post('update/{id}', 'AdminJobController@delete')->name('get_admin.apply_job.delete');
+    });
 });

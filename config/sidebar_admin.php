@@ -32,4 +32,9 @@ return [
         'icon' => 'supervisor_account',
         'route' => 'get_admin.user.index'
     ],
+    [
+        'name' => 'Ứng tuyển',
+        'icon' => 'vertical_split',
+        'route' => 'get_admin.apply_job.index'
+    ],
 ];

@@ -1,20 +1,5 @@
 @extends('employer::layouts.app_employer')
 @section('content')
-    <section class="overlape">
-        <div class="block no-padding">
-            <div data-velocity="-.1"
-                 style="background: url(&quot;https://grandetest.com/theme/jobhunt-html/images/resource/mslider1.jpg&quot;) 50% -42.4px repeat scroll transparent;"
-                 class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->
-            <div class="container fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="inner-header">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section>
         <div class="block no-padding">
             <div class="container">
@@ -31,6 +16,7 @@
                                         <td>Name</td>
                                         <td>Phone</td>
                                         <td>Ngày ứng tuyển</td>
+                                        <td>CV</td>
                                         <td>Thao tác</td>
                                     </tr>
                                     </thead>
@@ -39,7 +25,7 @@
                                         <tr>
                                             <td>
                                                 <div class="table-list-title">
-                                                    <h3><a href="" title="">{{ $item->job->j_name ?? "N\A" }}</a></h3>
+                                                    <h3><a href="{{ route('get.job',['slug' => $item->job->j_slug,'hashID' => $item->job->j_hash_slug]) }}" target="_blank" title="">{{ $item->job->j_name ?? "N\A" }}</a></h3>
                                                     <span><i class="la la-map-marker"></i>{{ $item->job->j_address }}</span>
                                                 </div>
                                             </td>
@@ -51,6 +37,9 @@
                                             </td>
                                             <td>
                                                 <span>{{ $item->created_at }}</span><br>
+                                            </td>
+                                            <td>
+                                                <a href="{{ pare_url_file($item->aj_file_cv) }}" download="" style="font-size: 14px"><i class="la la-download"></i> Download</a>
                                             </td>
                                             <td>
                                                 <ul class="action_job">

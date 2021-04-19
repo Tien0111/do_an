@@ -6,33 +6,33 @@
         </div>
         <div class="modal-body">
             <div class="new showb">
-                <div class="type">
-                    <a href="#" class="btn btn-type" style="display: none" data-button="online"><i class="la la-globe"></i> CV online</a>
-                    <a href="#" class="btn btn-type hidden" data-button="upload"><i class="la la-upload"></i> Tự tải cv lên</a>
-                </div>
+{{--                <div class="type">--}}
+{{--                    <a href="#" class="btn btn-type" style="display: none" data-button="online"><i class="la la-globe"></i> CV online</a>--}}
+{{--                    <a href="#" class="btn btn-type hidden" data-button="upload"><i class="la la-upload"></i> Tự tải cv lên</a>--}}
+{{--                </div>--}}
                 <div class="upload">
                     <div class="form-group">
                         <label>Họ và tên<span class="text-danger">*</span> :</label>
-                        <input type="text" value="Phan Trung Phú" placeholder="Họ tên" name="name" class="form-control">
+                        <input type="text" value="{{ get_data_user('users','name') }}" placeholder="Họ tên" name="name" class="form-control">
                         <p class="error-form"></p>
                     </div>
                     <div class="form-group">
                         <label>Upload CV<span class="text-danger">*</span> :</label>
-                        <input type="file"  placeholder="Họ tên" name="file" class="form-control">
+                        <input type="file"  placeholder="Họ tên" name="file" class="form-control" accept=".doc, .docx, .pdf">
                         <p class="error-form"></p>
                     </div>
                     <div class="form-row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Số điện thoại<span class="text-danger">*</span> :</label>
-                                <input type="text" value="0986420994" placeholder="Số điện thoại" name="phone" class="form-control">
+                                <input type="text" value="{{ get_data_user('users','phone') }}" placeholder="Số điện thoại" name="phone" class="form-control">
                                 <p class="error-form"></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Email<span class="text-danger">*</span> :</label>
-                                <input type="text" value="0986420994" placeholder="Email" name="email" class="form-control">
+                                <input type="text" value="{{ get_data_user('users','email') }}" placeholder="Email" name="email" class="form-control">
                                 <p class="error-form"></p>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
         </div>
         <div class="modal-footer">
             <a href="#" class="btn btn-gray" rel="modal:close">Huỷ bỏ</a>
-            <a href="#" class="btn btn-pink js-store-apply">Nộp hồ sơ</a>
+            <button type="submit" class="btn btn-pink js-store-apply">Nộp hồ sơ</button>
         </div>
     </form>
     <a href="#close-modal" rel="modal:close" class="close-modal "><i class="la la-times"></i></a>

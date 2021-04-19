@@ -20,20 +20,21 @@ var ApplyJob = {
                 showClose: true
             })
             $("#title-apply").text($this.attr('data-title'))
-            console.log(hashSlug)
         })
     },
 
     applyJob()
     {
-        $(".js-store-apply").click( function (event){
+        $("#form-apply").submit( function (event){
             event.preventDefault()
             let $form = $("#form-apply");
-            var formData = $form.serialize();
+            let formData = new FormData(this);
             $.ajax({
                 url: $form.attr('action'),
                 type:'POST',
                 data:formData,
+                contentType: false,
+                processData: false,
                 success:function(data){
                     console.log(data)
                     $.modal.close();

@@ -26,9 +26,14 @@ return [
             'route' => 'get_user.job.favourite'
         ],
         [
+            'title' => 'Cập nhật thông tin',
+            'icon' => 'la la-user',
+            'route' => 'get_user.user_info.index'
+        ],
+        [
             'title' => 'Cập nhật mật khẩu',
             'icon' => 'la la-lock',
-            'route' => ''
+            'route' => 'get_user.update_password.index'
         ],
         [
             'title' => 'Đăng xuất',
