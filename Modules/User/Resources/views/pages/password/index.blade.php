@@ -17,22 +17,34 @@
                                             <span class="pf-title">Mật khẩu cũ <span>(*)</span></span>
                                             <div class="pf-field">
                                                 <input type="password" placeholder="******"
-                                                       name="password_old" value="">
+                                                       name="password_old" value="{{ old('password_old') }}">
                                             </div>
+                                            @if ($errors->has('password_old'))
+                                                <span class="text-danger" style="color: red !important;font-size: 13px">{{ $errors->first('password_old') }}</span>
+                                            @endif
+                                            @if(session()->has('password_old'))
+                                                <span class="text-danger" style="color: red !important;font-size: 13px">{{ session()->get('password_old') }}</span>
+                                            @endif
                                         </div>
                                         <div class="col-lg-12">
                                             <span class="pf-title">Mật khẩu mới <span>(*)</span></span>
                                             <div class="pf-field">
                                                 <input type="password" placeholder="******"
-                                                       name="password" value="">
+                                                       name="password" value="{{ old('password') }}">
                                             </div>
+                                            @if ($errors->has('password'))
+                                                <span class="text-danger" style="color: red !important;font-size: 13px">{{ $errors->first('password') }}</span>
+                                            @endif
                                         </div>
                                         <div class="col-lg-12">
                                             <span class="pf-title">Xác nhận mật khẩu <span>(*)</span></span>
                                             <div class="pf-field">
                                                 <input type="password" placeholder="******"
-                                                       name="password_confirm" value="">
+                                                       name="password_confirm" value="{{ old('password_confirm') }}">
                                             </div>
+                                            @if ($errors->has('password_confirm'))
+                                                <span class="text-danger" style="color: red !important;font-size: 13px">{{ $errors->first('password_confirm') }}</span>
+                                            @endif
                                         </div>
 
                                         <div class="col-lg-12 mb-2">

@@ -69,14 +69,13 @@
                         </div><!-- Heading -->
                         @foreach($careersHot->chunk(4) as $careers)
                             <div class="cat-sec">
-                                <div class="row no-gape">
+                                <div class="row no-gape" style="padding-top: 0">
                                     @foreach($careers as $item)
                                         <div class="col-lg-3 col-md-3 col-sm-6">
                                             <div class="p-category">
                                                 <a href="{{ route('get.career.index',['slug' => $item->c_slug]) }}" title="{{ $item->c_name }}">
-                                                    <i class="la la-bullhorn"></i>
+                                                    <img src="{{ pare_url_file($item->c_avatar) }}" alt="" style="max-width: 100%;height: 80px;">
                                                     <span>{{ $item->c_name }}</span>
-                                                    <p>(22 open positions)</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -84,11 +83,6 @@
                                 </div>
                             </div>
                         @endforeach
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="browse-all-cat">
-                            <a href="" title="">Xem tất cả các ngành nghề</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -142,7 +136,7 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="browse-all-cat">
-                            <a href="index.html#" title="">Load more listings</a>
+                            <a href="{{ route('get.search.job') }}" title="Xem thêm tin tuyển dụng">Xem thêm</a>
                         </div>
                     </div>
                 </div>

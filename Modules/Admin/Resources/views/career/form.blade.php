@@ -5,6 +5,13 @@
         <input type="text" class="form-control"  value="{{ $career->c_name ?? '' }}" name="c_name">
     </div>
     <div class="form-group">
+        <label for="exampleInputEmail1">Nổi bật</label>
+        <select name="c_hot" class="form-control" id="">
+            <option value="0" {{ $career->c_hot ?? 0 == 0 ? "selected" : "" }}>Mặc định</option>
+            <option value="1" {{ $career->c_hot ?? 0 == 1 ? "selected" : "" }}>Nổi bật</option>
+        </select>
+    </div>
+    <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>

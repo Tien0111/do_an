@@ -3,7 +3,12 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Throwable;
+use Exception;
+use Carbon\Carbon;
 
 class Handler extends ExceptionHandler
 {
@@ -34,8 +39,33 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
+        Log::warning("Error");
         $this->reportable(function (Throwable $e) {
-            //
+
         });
+    }
+
+    public function render($request, Throwable $exception)
+    {
+        try{
+            $line = $exception->getLine();
+            $file = $exception->getFile();
+            $browser = $request->header('User-Agent');
+            $data = [
+                'ip'       => \Request::ip(),
+                'app_name' => env('APP_NAME'),
+                'line'     => $line,
+                'file'     => $file,
+                'content_text'  => $exception->getMessage(),
+                'browser'  => $browser,
+                'created_at'  => Carbon::now()
+            ];
+            $response = Http::post(env('APP_URL_API_LOG'),$data);
+        }catch (\Exception $exception)
+        {
+
+        }
+
+        return parent::render($request, $exception);
     }
 }

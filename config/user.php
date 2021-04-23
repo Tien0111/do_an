@@ -38,7 +38,7 @@ return [
         [
             'title' => 'Đăng xuất',
             'icon' => 'la la-unlink',
-            'route' => ''
+            'route' => 'get.logout'
         ],
     ]
 ];
