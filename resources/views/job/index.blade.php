@@ -24,7 +24,8 @@
                                 <h3 class="sb-title open" style="margin-bottom: 15px">Kinh nghiệm làm việc</h3>
                                 <div class="aside__widget-group myList">
                                     @foreach($filterJob['experience'] ?? [] as $item)
-                                    <a href="{{ request()->fullUrlWithQuery(['e' => $item->id]) }}" rel="nofollow" title="{{ $item->a_name }}" class="aside__widget-link text-collapse" style="display: block;padding: 5px 10px;color: #666;font-size: 14px">
+                                    <a href="{{ request()->fullUrlWithQuery(['e' => $item->id]) }}" rel="nofollow" title="{{ $item->a_name }}"
+                                       class="aside__widget-link text-collapse {{ Request::get('e') == $item->id ? 'active' : ''  }}" style="display: block;padding: 5px 10px;color: #666;font-size: 14px">
                                         <span>{{ $item->a_name }}</span>
                                     </a>
                                     @endforeach
@@ -34,7 +35,8 @@
                                 <h3 class="sb-title open" style="margin-bottom: 15px">Cấp bậc</h3>
                                 <div class="aside__widget-group myList">
                                     @foreach($filterJob['ranks'] ?? [] as $item)
-                                        <a href="{{ request()->fullUrlWithQuery(['r' => $item->id]) }}" rel="nofollow" title="{{ $item->a_name }}" class="aside__widget-link text-collapse" style="display: block;padding: 5px 10px;color: #666;font-size: 14px">
+                                        <a href="{{ request()->fullUrlWithQuery(['r' => $item->id]) }}" rel="nofollow" title="{{ $item->a_name }}"
+                                           class="aside__widget-link text-collapse {{ Request::get('r') == $item->id ? 'active' : ''  }}" style="display: block;padding: 5px 10px;color: #666;font-size: 14px">
                                             <span>{{ $item->a_name }}</span>
                                         </a>
                                     @endforeach
@@ -44,7 +46,8 @@
                                 <h3 class="sb-title open" style="margin-bottom: 15px">Loại hình làm việc</h3>
                                 <div class="aside__widget-group myList">
                                     @foreach($filterJob['formOfWork'] ?? [] as $item)
-                                        <a href="{{ request()->fullUrlWithQuery(['f' => $item->id]) }}" rel="nofollow" title="{{ $item->a_name }}" class="aside__widget-link text-collapse" style="display: block;padding: 5px 10px;color: #666;font-size: 14px">
+                                        <a href="{{ request()->fullUrlWithQuery(['f' => $item->id]) }}" rel="nofollow"
+                                           title="{{ $item->a_name }}" class="aside__widget-link text-collapse {{ Request::get('f') == $item->id ? 'active' : ''  }}" style="display: block;padding: 5px 10px;color: #666;font-size: 14px">
                                             <span>{{ $item->a_name }}</span>
                                         </a>
                                     @endforeach
@@ -54,7 +57,7 @@
                     </aside>
                     <div class="col-lg-9 column">
                         <div class="filterbar">
-                            <p>Total of 145 Employer</p>
+                            <p>Total of {{ $jobs->total() }} Employer</p>
                         </div>
                         <div class="emply-list-sec style2">
                             @foreach($jobs ?? [] as $item)
@@ -73,6 +76,7 @@
                                 </div>
                             </div>
                             @endforeach
+                            {!! $jobs->appends($query ?? [])->links('vendor.pagination.bootstrap-4') !!}
                         </div>
                     </div>
                 </div>

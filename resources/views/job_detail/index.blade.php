@@ -98,7 +98,7 @@
                                                 <li>
                                                     <i class="la la-map"></i>
                                                     <h3>Địa điểm</h3>
-                                                    <span>{{ $job->company->c_address }}</span>
+                                                    <span>{{ $job->company->c_address ?? "[N\A]" }}</span>
                                                 </li>
                                                 <li>
                                                     <i class="la la-bars"></i>

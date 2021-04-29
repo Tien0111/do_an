@@ -59,6 +59,7 @@
                         </tbody>
                     </table>
                 </div>
+                {!! $applyJobs->links('vendor.pagination.bootstrap-4') !!}
             </div>
         </div>
     </div>

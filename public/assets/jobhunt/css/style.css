@@ -146,6 +146,9 @@ header {
     z-index: 3;
     position: relative;
 }
+.text-collapse.active {
+    color: #fb236a!important;
+}
 
 
 /* Theme Layout */
