@@ -9,7 +9,7 @@
 
     <title>Login system</title>
 
-    <link rel="stylesheet" href="http://laravel-qldiemdanh.local:8888/css/login.css">
+    <link rel="stylesheet" href="{{ asset('css/login_admin.css') }}">
 </head>
 
 <body>

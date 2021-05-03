@@ -19,11 +19,13 @@ class JobController extends Controller
         $job = Job::with('career:id,c_name', 'company:id,c_name,c_logo,c_address')
             ->where('j_status',Job::STATUS_SUCCESS)
             ->find($idJob);
+
         if (!$job) return abort(404);
 
         $company = Company::with('careers')->find($job->j_company_id);
 
         $jobsSuggest = Job::where('j_career_id', $job->j_career_id)
+            ->where('j_status',Job::STATUS_SUCCESS)
             ->orderByDesc('id')
             ->limit(10)
             ->get();

@@ -10,7 +10,7 @@ class SearchJobController extends Controller
 {
     public function index(Request $request)
     {
-        $jobs = Job::with('company:id,c_name,c_logo')->whereRaw(1);
+        $jobs = Job::with('company:id,c_name,c_logo')->where('j_status',Job::STATUS_SUCCESS);
         if ($title = $request->t)
             $jobs->where('j_name', 'like', '%' . $title . '%');
 
