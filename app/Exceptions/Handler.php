@@ -47,24 +47,24 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $exception)
     {
-        try{
-            $line = $exception->getLine();
-            $file = $exception->getFile();
-            $browser = $request->header('User-Agent');
-            $data = [
-                'ip'       => \Request::ip(),
-                'app_name' => env('APP_NAME'),
-                'line'     => $line,
-                'file'     => $file,
-                'content_text'  => $exception->getMessage(),
-                'browser'  => $browser,
-                'created_at'  => Carbon::now()
-            ];
-            $response = Http::post(env('APP_URL_API_LOG'),$data);
-        }catch (\Exception $exception)
-        {
-
-        }
+//        try{
+//            $line = $exception->getLine();
+//            $file = $exception->getFile();
+//            $browser = $request->header('User-Agent');
+//            $data = [
+//                'ip'       => \Request::ip(),
+//                'app_name' => env('APP_NAME'),
+//                'line'     => $line,
+//                'file'     => $file,
+//                'content_text'  => $exception->getMessage(),
+//                'browser'  => $browser,
+//                'created_at'  => Carbon::now()
+//            ];
+//            $response = Http::post(env('APP_URL_API_LOG'),$data);
+//        }catch (\Exception $exception)
+//        {
+//
+//        }
 
         return parent::render($request, $exception);
     }

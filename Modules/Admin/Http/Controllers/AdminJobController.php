@@ -9,14 +9,20 @@ use Illuminate\Routing\Controller;
 
 class AdminJobController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $jobs = Job::with('career:id,c_name')->orderByDesc('id')
+        $jobs = Job::with('career:id,c_name');
+        if ($n = $request->n)
+            $jobs->where('j_name', 'like', '%' . $n . '%');
+
+        $jobs = $jobs->orderByDesc('id')
             ->paginate(10);
 
         $viewData = [
-            'jobs' => $jobs
+            'jobs'  => $jobs,
+            'query' => $request->query()
         ];
+
         return view('admin::job.index', $viewData);
     }
 
@@ -34,8 +40,8 @@ class AdminJobController extends Controller
 
     public function update(Request $request, $id)
     {
-        $job = Job::find($id);
-        $job->j_status = $request->j_status;
+        $job             = Job::find($id);
+        $job->j_status   = $request->j_status;
         $job->j_admin_id = 0;
         $job->save();
         return redirect()->route('get_admin.job.index');

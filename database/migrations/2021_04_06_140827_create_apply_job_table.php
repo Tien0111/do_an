@@ -24,6 +24,7 @@ class CreateApplyJobTable extends Migration
             $table->integer('aj_company_id')->default(0);
             $table->integer('aj_employer_id')->default(0);
             $table->string('aj_file_cv')->nullable();
+            $table->tinyInteger('aj_apply')->default(0);
             $table->longText('aj_about')->nullable();
             $table->timestamps();
         });

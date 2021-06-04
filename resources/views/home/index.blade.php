@@ -196,126 +196,126 @@
         </div>
     </section>
 
-    <section>
-        <div class="block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="heading">
-                            <h2>Companies We've Helped</h2>
-                            <span>Some of the companies we've helped recruit excellent applicants over the years.</span>
-                        </div><!-- Heading -->
-                        <div class="comp-sec">
-                            <div class="company-img">
-                                <a href="index.html#" title=""><img
-                                        src="https://grandetest.com/theme/jobhunt-html/images/resource/cc1.jpg" alt=""/></a>
-                            </div><!-- Client  -->
-                            <div class="company-img">
-                                <a href="index.html#" title=""><img
-                                        src="https://grandetest.com/theme/jobhunt-html/images/resource/cc2.jpg" alt=""/></a>
-                            </div><!-- Client  -->
-                            <div class="company-img">
-                                <a href="index.html#" title=""><img
-                                        src="https://grandetest.com/theme/jobhunt-html/images/resource/cc3.jpg" alt=""/></a>
-                            </div><!-- Client  -->
-                            <div class="company-img">
-                                <a href="index.html#" title=""><img
-                                        src="https://grandetest.com/theme/jobhunt-html/images/resource/cc4.jpg" alt=""/></a>
-                            </div><!-- Client  -->
-                            <div class="company-img">
-                                <a href="index.html#" title=""><img
-                                        src="https://grandetest.com/theme/jobhunt-html/images/resource/cc5.jpg" alt=""/></a>
-                            </div><!-- Client  -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section>--}}
+{{--        <div class="block">--}}
+{{--            <div class="container">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-lg-12">--}}
+{{--                        <div class="heading">--}}
+{{--                            <h2>Companies We've Helped</h2>--}}
+{{--                            <span>Some of the companies we've helped recruit excellent applicants over the years.</span>--}}
+{{--                        </div><!-- Heading -->--}}
+{{--                        <div class="comp-sec">--}}
+{{--                            <div class="company-img">--}}
+{{--                                <a href="index.html#" title=""><img--}}
+{{--                                        src="https://grandetest.com/theme/jobhunt-html/images/resource/cc1.jpg" alt=""/></a>--}}
+{{--                            </div><!-- Client  -->--}}
+{{--                            <div class="company-img">--}}
+{{--                                <a href="index.html#" title=""><img--}}
+{{--                                        src="https://grandetest.com/theme/jobhunt-html/images/resource/cc2.jpg" alt=""/></a>--}}
+{{--                            </div><!-- Client  -->--}}
+{{--                            <div class="company-img">--}}
+{{--                                <a href="index.html#" title=""><img--}}
+{{--                                        src="https://grandetest.com/theme/jobhunt-html/images/resource/cc3.jpg" alt=""/></a>--}}
+{{--                            </div><!-- Client  -->--}}
+{{--                            <div class="company-img">--}}
+{{--                                <a href="index.html#" title=""><img--}}
+{{--                                        src="https://grandetest.com/theme/jobhunt-html/images/resource/cc4.jpg" alt=""/></a>--}}
+{{--                            </div><!-- Client  -->--}}
+{{--                            <div class="company-img">--}}
+{{--                                <a href="index.html#" title=""><img--}}
+{{--                                        src="https://grandetest.com/theme/jobhunt-html/images/resource/cc5.jpg" alt=""/></a>--}}
+{{--                            </div><!-- Client  -->--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
-    <section>
-        <div class="block">
-            <div data-velocity="-.1"
-                 style="background: url(https://grandetest.com/theme/jobhunt-html/images/resource/parallax3.jpg) repeat scroll 50% 422.28px transparent;"
-                 class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="heading">
-                            <h2>Quick Career Tips</h2>
-                            <span>Found by employers communicate directly with hiring managers and recruiters.</span>
-                        </div><!-- Heading -->
-                        <div class="blog-sec">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="my-blog">
-                                        <div class="blog-thumb">
-                                            <a href="index.html#" title=""><img
-                                                    src="https://grandetest.com/theme/jobhunt-html/images/resource/b1.jpg"
-                                                    alt=""/></a>
-                                            <div class="blog-metas">
-                                                <a href="index.html#" title="">March 29, 2017</a>
-                                                <a href="index.html#" title="">0 Comments</a>
-                                            </div>
-                                        </div>
-                                        <div class="blog-details">
-                                            <h3><a href="index.html#" title="">Attract More Attention Sales And
-                                                    Profits</a></h3>
-                                            <p>A job is a regular activity performed in exchange becoming an employee,
-                                                volunteering, </p>
-                                            <a href="index.html#" title="">Read More <i
-                                                    class="la la-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="my-blog">
-                                        <div class="blog-thumb">
-                                            <a href="index.html#" title=""><img
-                                                    src="https://grandetest.com/theme/jobhunt-html/images/resource/b2.jpg"
-                                                    alt=""/></a>
-                                            <div class="blog-metas">
-                                                <a href="index.html#" title="">March 29, 2017</a>
-                                                <a href="index.html#" title="">0 Comments</a>
-                                            </div>
-                                        </div>
-                                        <div class="blog-details">
-                                            <h3><a href="index.html#" title="">11 Tips to Help You Get New Clients</a>
-                                            </h3>
-                                            <p>A job is a regular activity performed in exchange becoming an employee,
-                                                volunteering, </p>
-                                            <a href="index.html#" title="">Read More <i
-                                                    class="la la-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="my-blog">
-                                        <div class="blog-thumb">
-                                            <a href="index.html#" title=""><img
-                                                    src="https://grandetest.com/theme/jobhunt-html/images/resource/b3.jpg"
-                                                    alt=""/></a>
-                                            <div class="blog-metas">
-                                                <a href="index.html#" title="">March 29, 2017</a>
-                                                <a href="index.html#" title="">0 Comments</a>
-                                            </div>
-                                        </div>
-                                        <div class="blog-details">
-                                            <h3><a href="index.html#" title="">An Overworked Newspaper Editor</a></h3>
-                                            <p>A job is a regular activity performed in exchange becoming an employee,
-                                                volunteering, </p>
-                                            <a href="index.html#" title="">Read More <i
-                                                    class="la la-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section>--}}
+{{--        <div class="block">--}}
+{{--            <div data-velocity="-.1"--}}
+{{--                 style="background: url(https://grandetest.com/theme/jobhunt-html/images/resource/parallax3.jpg) repeat scroll 50% 422.28px transparent;"--}}
+{{--                 class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->--}}
+{{--            <div class="container">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-lg-12">--}}
+{{--                        <div class="heading">--}}
+{{--                            <h2>Quick Career Tips</h2>--}}
+{{--                            <span>Found by employers communicate directly with hiring managers and recruiters.</span>--}}
+{{--                        </div><!-- Heading -->--}}
+{{--                        <div class="blog-sec">--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-lg-4">--}}
+{{--                                    <div class="my-blog">--}}
+{{--                                        <div class="blog-thumb">--}}
+{{--                                            <a href="index.html#" title=""><img--}}
+{{--                                                    src="https://grandetest.com/theme/jobhunt-html/images/resource/b1.jpg"--}}
+{{--                                                    alt=""/></a>--}}
+{{--                                            <div class="blog-metas">--}}
+{{--                                                <a href="index.html#" title="">March 29, 2017</a>--}}
+{{--                                                <a href="index.html#" title="">0 Comments</a>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="blog-details">--}}
+{{--                                            <h3><a href="index.html#" title="">Attract More Attention Sales And--}}
+{{--                                                    Profits</a></h3>--}}
+{{--                                            <p>A job is a regular activity performed in exchange becoming an employee,--}}
+{{--                                                volunteering, </p>--}}
+{{--                                            <a href="index.html#" title="">Read More <i--}}
+{{--                                                    class="la la-long-arrow-right"></i></a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="col-lg-4">--}}
+{{--                                    <div class="my-blog">--}}
+{{--                                        <div class="blog-thumb">--}}
+{{--                                            <a href="index.html#" title=""><img--}}
+{{--                                                    src="https://grandetest.com/theme/jobhunt-html/images/resource/b2.jpg"--}}
+{{--                                                    alt=""/></a>--}}
+{{--                                            <div class="blog-metas">--}}
+{{--                                                <a href="index.html#" title="">March 29, 2017</a>--}}
+{{--                                                <a href="index.html#" title="">0 Comments</a>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="blog-details">--}}
+{{--                                            <h3><a href="index.html#" title="">11 Tips to Help You Get New Clients</a>--}}
+{{--                                            </h3>--}}
+{{--                                            <p>A job is a regular activity performed in exchange becoming an employee,--}}
+{{--                                                volunteering, </p>--}}
+{{--                                            <a href="index.html#" title="">Read More <i--}}
+{{--                                                    class="la la-long-arrow-right"></i></a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="col-lg-4">--}}
+{{--                                    <div class="my-blog">--}}
+{{--                                        <div class="blog-thumb">--}}
+{{--                                            <a href="index.html#" title=""><img--}}
+{{--                                                    src="https://grandetest.com/theme/jobhunt-html/images/resource/b3.jpg"--}}
+{{--                                                    alt=""/></a>--}}
+{{--                                            <div class="blog-metas">--}}
+{{--                                                <a href="index.html#" title="">March 29, 2017</a>--}}
+{{--                                                <a href="index.html#" title="">0 Comments</a>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="blog-details">--}}
+{{--                                            <h3><a href="index.html#" title="">An Overworked Newspaper Editor</a></h3>--}}
+{{--                                            <p>A job is a regular activity performed in exchange becoming an employee,--}}
+{{--                                                volunteering, </p>--}}
+{{--                                            <a href="index.html#" title="">Read More <i--}}
+{{--                                                    class="la la-long-arrow-right"></i></a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <section>
         <div class="block no-padding">
