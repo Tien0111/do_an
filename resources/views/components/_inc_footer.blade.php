@@ -8,7 +8,7 @@
                             <div class="logo">
                                 <a href="index.html" title=""><img src="https://grandetest.com/theme/jobhunt-html/images/resource/logo.png" alt="" /></a>
                             </div>
-                            <span>Collin Street West, Victor 8007, Australia.</span>
+                            <span>số 3 Cầu Giấy, P.Láng Thượng, Q.Đống Đa, TP.Hà Nội</span>
                             <span>+1 246-345-0695</span>
                             <span><a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6a03040c052a000508021f041e44090507">[email&#160;protected]</a></span>
                             <div class="social">
@@ -23,23 +23,23 @@
                 </div>
                 <div class="col-lg-4 column">
                     <div class="widget">
-                        <h3 class="footer-title">Frequently Asked Questions</h3>
+                        <h3 class="footer-title">Những câu hỏi thường gặp</h3>
                         <div class="link_widgets">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <a href="index.html#" title="">Privacy & Seurty </a>
-                                    <a href="index.html#" title="">Terms of Serice</a>
-                                    <a href="index.html#" title="">Communications </a>
-                                    <a href="index.html#" title="">Referral Terms </a>
-                                    <a href="index.html#" title="">Lending Licnses </a>
-                                    <a href="index.html#" title="">Disclaimers </a>
+                                    <a href="index.html#" title="">Bảo mật và quyền riêng tư </a>
+                                    <a href="index.html#" title="">Điều khoản dịch vụ</a>
+                                    <a href="index.html#" title="">Thông tin liên lạc </a>
+                                    <a href="index.html#" title="">Điều khoản giới thiệu </a>
+                                    <a href="index.html#" title="">Giấy phép hoạt động </a>
+                                    <a href="index.html#" title="">Giải quyết khiếu nạn </a>
                                 </div>
                                 <div class="col-lg-6">
-                                    <a href="index.html#" title="">Support </a>
-                                    <a href="index.html#" title="">How It Works </a>
-                                    <a href="index.html#" title="">For Employers </a>
-                                    <a href="index.html#" title="">Underwriting </a>
-                                    <a href="index.html#" title="">Contact Us</a>
+                                    <a href="index.html#" title="">Hỗ trợ </a>
+                                    <a href="index.html#" title="">Quy chế hoạt động </a>
+                                    <a href="index.html#" title="">Nhà tuyển dụng </a>
+                                    <a href="index.html#" title="">Đánh giá rủi ro </a>
+                                    <a href="index.html#" title="">Liên hệ chúng tôi</a>
                                 </div>
                             </div>
                         </div>
@@ -47,16 +47,15 @@
                 </div>
                 <div class="col-lg-2 column">
                     <div class="widget">
-                        <h3 class="footer-title">Find Jobs</h3>
+                        <h3 class="footer-title">Tìm kiếm việc làm</h3>
                         <div class="link_widgets">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <a href="index.html#" title="">US Jobs</a>
-                                    <a href="index.html#" title="">Canada Jobs</a>
-                                    <a href="index.html#" title="">UK Jobs</a>
-                                    <a href="index.html#" title="">Emplois en Fnce</a>
-                                    <a href="index.html#" title="">Jobs in Deuts</a>
-                                    <a href="index.html#" title="">Vacatures China</a>
+                                    <a href="index.html#" title="">Công việc tại Hà Nội</a>
+                                    <a href="index.html#" title="">Công việc tại Tp.Hồ Chí Minh</a>
+                                    <a href="index.html#" title="">Nhà tuyển dụng tại Đà Nẵng</a>
+                                    <a href="index.html#" title="">Công việc tại Bình Dương</a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -74,7 +73,7 @@
         </div>
     </div>
     <div class="bottom-line">
-        <span>© 2018 Jobhunt All rights reserved. Design by Creative Layers</span>
+        <span>© 2021 Jobhunt All rights reserved</span>
         <a href="index.html#scrollup" class="scrollup" title=""><i class="la la-arrow-up"></i></a>
     </div>
 </footer>

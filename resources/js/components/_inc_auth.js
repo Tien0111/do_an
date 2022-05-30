@@ -57,22 +57,30 @@ var Auth = {
             event.preventDefault()
             let $formLogin = $("#formLogin");
             var formData = $formLogin.serialize();
+            console.log(1)
             $.ajax({
                 url: $formLogin.attr('action'),
                 type:'POST',
                 data:formData,
                 success:function(response){
-                    if(response.status === 200)
+                    console.log(response)
+                    if(response.status === 422)
                     {
+                        const {errors} = response
+                        console.log(errors)
+                        Object.keys(errors).forEach((error) => {
+                            $(document).find('[name='+error+']').parent()
+                                .after('<span class="text-error">' +errors[error]+ '</span>')
+                        })
+                        return;
+                        
+                    }
+                    if(response.status === 200) {
                         location.reload();
                     }
                 },
                 error: function (response) {
-                    if( response.status === 422 ) {
-                        $.each(response.responseJSON.errors,function(field_name,error){
-                            $(document).find('[name='+field_name+']').parent().after('<span class="text-error">' +error+ '</span>')
-                        })
-                    }
+                    
                 }
             });
         })

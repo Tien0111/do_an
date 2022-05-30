@@ -153,8 +153,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="heading light">
-                            <h2>Kind Words From Happy Candidates</h2>
-                            <span>What other people thought about the service provided by JobHunt</span>
+                            <h2>Cảm nghĩ của ứng viên</h2>
+                            <span>Những nhận xét từ người khác về JobHunt</span>
                         </div><!-- Heading -->
                         <div class="reviews-sec" id="reviews-carousel">
                             <div class="col-lg-6">

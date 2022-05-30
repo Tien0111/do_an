@@ -19,9 +19,11 @@ class LoginController extends Controller
                     'status' => 200
                 ]);
             }
-
             return response()->json([
-                'status' => 201
+                'status' => 422,
+                'errors' => [
+                    'email' => 'email or password not correct!'
+                ]
             ]);
 
         }

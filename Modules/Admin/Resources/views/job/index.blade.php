@@ -24,8 +24,8 @@
                         <tr>
                             <th scope="col" class="border-0">#</th>
                             <th scope="col" class="border-0 text-left">Tiêu đề</th>
-                            <th scope="col" class="border-0">Tên ngành nghề</th>
                             <th scope="col" class="border-0">Trạng thái</th>
+                            <th scope="col" class="border-0">Tên ngành nghề</th>
                             <th scope="col" class="border-0">Thời gian</th>
                             <th scope="col" class="border-0">Thao tác</th>
                         </tr>

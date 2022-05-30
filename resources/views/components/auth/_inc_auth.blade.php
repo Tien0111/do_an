@@ -3,6 +3,7 @@
         <span class="close-popup"><i class="la la-close"></i></span>
         <h3>Đăng nhập</h3>
         <form action="{{ route('post.login') }}" method="POST" id="formLogin">
+            @csrf
             <div class="cfield">
                 <input type="email" name="email" required placeholder="Email đăng nhập" />
                 <i class="la la-user"></i>
